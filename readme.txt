@@ -1,0 +1,1 @@
+A simple python program for the CAS which finds the approximate solution of a graph using the bisect method. (Yes, you need to type it into the CAS)
