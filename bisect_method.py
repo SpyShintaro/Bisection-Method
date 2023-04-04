@@ -31,7 +31,7 @@ def main(sol1, sol2, f) -> float:
         except RecursionError:
             print("Can't find x-intercept in given domain. Check boundary values and try again.")
             return None
-    main(sol2, sol1, f) # I hope you liked that function, because if the domain is wrong, it's about to do it 999 more times
+    main(sol2, sol1, f) # I hope you liked that function, because if the domain is wrong, we're about to do it 999 more times
 
 
 def validate_equation(func, x: float) -> bool:
@@ -68,14 +68,14 @@ if __name__ == "__main__": # You're about to witness perfection. Trust me.
         except (SyntaxError, TypeError):
             print("Invalid function.")
     
-    while True: ## Millenials: I hate my life
+    while True: ## Millenials: i hate my life
         try:
             a = float(input("What is the lower bound? ")) # Order of a and b don't matter, the program will try both
             break
         except ValueError:
             print("Please enter a floating point number (decimal)")
     
-    while True: ## Gen hiu;aefwiuhlgyfeWAhlgiySEFHLIUefwhlaiualegfwiuhyefahlwiu
+    while True: ## i am actually going to scream.
         try:
             b = float(input("What is the upper bound? "))
             break
