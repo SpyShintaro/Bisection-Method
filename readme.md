@@ -16,14 +16,23 @@ To directly install to the CAS, do the following:
     
     - Scroll to the top of the page and press the green <strong>Code</strong> button
     - Choose "Download as ZIP" from the dropdown that appears, and unzip the folder somewhere you can find it once it's done
+ 
 ![Download as Zip](images/download_zip.png)
+
 2. Open the TI-Nspire Student Software. You should see this screen:
+
 ![TI-Nspire Main Window](images/ti_window.png)
+
 3. Connect your CAS to your computer using the mini-USB cable. A button should show up in the bottom sidebar on the left named after the CAS, under the header "TI-Nspire CX Connected Handhelds"
+
 ![Connected Handhelds sidebar](images/connected_handhelds.png)
+
 4. Double click on the button
+
 5. On the upper sidebar, navigate to the directory that you have unzipped the repository to
+
 ![CAS files sidebar](images/cas_files.png)
+
 6. Drag the <strong>bisection_method.tns</strong> from the upper sidebar into the lower one
 
 If a popup has shown up one the screen with the message "Document Received", congratulations! You have successfully downloaded the program
@@ -32,12 +41,15 @@ If a popup has shown up one the screen with the message "Document Received", con
 The .tns file you have just downloaded is split into three pages. These correspond to necessary components for the program:
 
 <strong>1.1</strong> The page containing all of the Python code. You generally won't have to worry about anything on this page
+
 ![Python page](images/capture_1_1.jpg)
 
 <strong>1.2</strong> The Python "Shell". This page is where you will run and input the program
+
 ![Shell page](images/capture_1_2.jpg)
 
 <strong>1.3</strong> The spreadsheet page. This contains the results from each step of the method, the calculated values will be stored here.
+
 ![Spreadsheet Page](images/capture_1_3.jpg)
 
 In order to run the program, do the following:
