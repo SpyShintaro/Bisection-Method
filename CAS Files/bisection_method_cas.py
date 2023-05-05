@@ -35,17 +35,22 @@ def main(sol1, sol2, f):
             a = c
         else:
             b = c
-
-    if validate_equation(c, f):
-        store_list("a", a_vals)
-        store_list("f_a", f_a)
-        store_list("b", b_vals)
-        store_list("f_b", f_b)
-        store_list("c", c_vals)
-        store_list("f_c", f_c)
-        return c
-    else:
-        main(sol2, sol1, f)
+    try:
+        if validate_equation(c, f):
+            store_list("a", a_vals)
+            store_list("f_a", f_a)
+            store_list("b", b_vals)
+            store_list("f_b", f_b)
+            store_list("c", c_vals)
+            store_list("f_c", f_c)
+            return c
+        else:
+            main(sol2, sol1, f)
+    except RecursionError:
+        print("Can't find x-intercept of given domain. Check boundary values and try again.")
+        return None
+    
+    main(sol2, sol1, f)
 
 def validate_equation(x, func):
     """
@@ -68,7 +73,29 @@ def get_c(a, b):
     """
     return (a + b) / 2
 
-get_func = input("Please input the function: ").replace("^", "**") # Needs to be used with get_f to actually do anything
-low_bound = float(input("Lower bound: "))
-upper_bound = float(input("Upper bound: "))
-main(low_bound, upper_bound, get_func)
+while True:
+    get_func = input("Please input the expression: ").replace("^", "**")
+    try:
+        get_f(get_func, 1)
+        break
+    except (SyntaxError, TypeError):
+        print("Invalid function.")
+
+while True:
+    try:
+        a = float(input("What is the lower bound? "))
+        break
+    except ValueError:
+        print("Please enter a floating point number (decimal)")
+
+while True:
+    try:
+        b = float(input("What is the upper bound? "))
+        break
+    except ValueError:
+        print("Please enter a floating point number (decimal)")
+
+solution = main(a, b, get_func)
+if solution:
+    print("Done")
+    print("x =", solution)
